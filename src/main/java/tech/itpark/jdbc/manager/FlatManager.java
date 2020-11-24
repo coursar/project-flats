@@ -51,6 +51,13 @@ public class FlatManager {
     );
   }
 
+  public List<Integer> calculatePaymentsForId(long id, int months) {
+    // TODO: по id достаёте квартиру
+    // TODO: берёте стоимость и делите по месяцам
+    final var flat = getById(id);
+    return paymentService.calculate(flat.getPrice(), months);
+  }
+
   public Flat save(Flat item) {
     if (item.getId() == 0) {
       KeyHolder keyHolder = new GeneratedKeyHolder();

@@ -1,14 +1,12 @@
 package tech.itpark.jdbc.service;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 // TODO: Ctrl + Shift + T
-@Service
+@Component
 public class PaymentService {
     // price - в миллионах
     // ежемесячные платежи тоже в миллионах

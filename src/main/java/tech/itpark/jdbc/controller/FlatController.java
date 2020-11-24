@@ -33,6 +33,12 @@ public class FlatController {
     return manager.getByOwnerId(ownerId);
   }
 
+  @GetMapping("/{id}/payments")
+  public List<Integer> getPayments(@PathVariable long id, @RequestParam int months) {
+    return manager.calculatePaymentsForId(id, months);
+  }
+
+
   @PostMapping
   public Flat save(@RequestBody Flat item) {
     return manager.save(item);
