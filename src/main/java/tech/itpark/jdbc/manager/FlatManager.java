@@ -8,6 +8,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 import tech.itpark.jdbc.mapper.FlatRowMapper;
 import tech.itpark.jdbc.model.Flat;
+import tech.itpark.jdbc.service.PaymentService;
 
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class FlatManager {
   private final NamedParameterJdbcTemplate template;
-  private final FlatRowMapper rowMapper = new FlatRowMapper();
+  private final PaymentService paymentService;
+  private final FlatRowMapper rowMapper;
 
   public List<Flat> getAll() {
     return template.query(

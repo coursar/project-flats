@@ -1,0 +1,22 @@
+GET https://project-flats.herokuapp.com/flats
+
+###
+
+GET https://project-flats.herokuapp.com/flats/search?district=Ново-Савиновский&rooms=1
+
+###
+
+GET https://project-flats.herokuapp.com/flats/save?id=0&district=Ново-Савиновский&rooms=1
+
+###
+
+POST https://project-flats.herokuapp.com/flats
+Content-Type: application/json
+
+{
+  "id": 1,
+  "ownerId": 1,
+  "district": "Ново-Савиновский",
+  "price": 3,
+  "rooms": 3
+}
